@@ -1,0 +1,135 @@
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  place-content: center;
+  font-size: 30px;
+  background-color: #a7a7a75b;
+}
+
+@property --wait-Porcentage {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 0%;
+}
+
+.btn-animation {
+  background-color: #044fea;
+  color: #fefefe;
+  width: 170px;
+  height: 90px;
+  border-radius: 100px;
+  cursor: pointer;
+  display: grid;
+  place-content: center;
+  position: relative;
+  z-index: -20px;
+}
+
+.btn-animation .btn-text {
+  animation: aparecer_text 0.2s both;
+}
+
+.btn-animado {
+  background-color: #98989888;
+  animation: btn_animation 5s both;
+}
+
+.btn-animation .wait-process {
+  position: absolute;
+  z-index: -10px;
+  width: 100%;
+  height: 100%;
+  border-radius: 100px;
+  background: conic-gradient(#044fea var(--wait-Porcentage), #98989888 0%);
+  animation: wait_process 2.5s 0.5s linear both;
+}
+
+.btn-circle {
+  background-color: #eae6e6;
+  border-radius: 100px;
+  z-index: 10;
+  display: grid;
+  place-content: center;
+  animation: circle_animation 4s 0.2s both;
+}
+
+.btn-animation div {
+  width: 0;
+  height: 0;
+}
+
+.btn-circle .btn-circle-icon {
+  color: #eae6e6;
+  animation: icon_visible 3s 0.5s both;
+}
+
+@keyframes btn_animation {
+  7% {
+    width: 92px;
+  }
+  80% {
+    width: 92px;
+  }
+}
+
+@keyframes circle_animation {
+  0% {
+    width: 0px;
+    height: 0px;
+  }
+  10% {
+    width: 60px;
+    height: 60px;
+  }
+  57% {
+    background-color: #eae6e6;
+  }
+  90% {
+    background-color: #044fea;
+    width: 60px;
+    height: 60px;
+  }
+  100% {
+    background-color: #044fea;
+    width: 0;
+    height: 0;
+  }
+}
+
+@keyframes icon_visible {
+  0% {
+    scale: 0;
+  }
+  13% {
+    scale: 2;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    scale: 2;
+    opacity: 0;
+  }
+}
+
+@keyframes wait_process {
+  100% {
+    --wait-Porcentage: 100%;
+  }
+}
+
+@keyframes aparecer_text {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

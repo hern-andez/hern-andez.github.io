@@ -1,0 +1,100 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #050600;
+  height: 100vh;
+  display: grid;
+  place-content: center;
+}
+
+@property --btn-animation-conic {
+  syntax: "<angle>";
+  inherits: false;
+  initial-value: 0deg;
+}
+
+.contenedor {
+  min-width: 400px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.contenedor .btn-1 {
+  --btn-color: #7cc700;
+}
+.contenedor .btn-2 {
+  --btn-color: #fe9aff;
+}
+.contenedor .btn-3 {
+  --btn-color: #01d6fb;
+}
+
+.contenedor .btn-contenedor {
+  height: 55px;
+  width: 170px;
+  position: relative;
+  background: conic-gradient(from var(--btn-animation-conic), transparent 70%, var(--btn-color));
+  transition: all 0.5s;
+  animation: conic_border 1s infinite linear;
+}
+
+.btn-contenedor button {
+  background-color: #050600;
+  color: var(--btn-color);
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  inset: 2px;
+  transition: all 0.5s;
+}
+
+.btn-contenedor div {
+  background: linear-gradient(transparent 5%, var(--btn-color));
+  font-size: 14px;
+  user-select: none;
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
+  position: absolute;
+  left: 1px;
+  bottom: -51px;
+  transform: rotateX(180deg);
+  filter: blur(1px) opacity(85%);
+  display: grid;
+  place-content: center;
+  display: none;
+}
+
+.contenedor .btn-contenedor:hover {
+  background-color: var(--btn-color);
+  box-shadow: 0px 0px 20px 0px var(--btn-color), 0px 0px 200px 3px var(--btn-color);
+}
+
+.btn-contenedor:hover button {
+  background-color: var(--btn-color);
+  color: #050600;
+}
+
+.btn-contenedor:hover div {
+  display: grid;
+  animation: btn_reflejo_aparecer 0.8s both;
+}
+
+@keyframes conic_border {
+  to {
+    --btn-animation-conic: 360deg;
+  }
+}
+
+@keyframes btn_reflejo_aparecer {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
