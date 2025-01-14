@@ -1,0 +1,111 @@
+/* Inicio de navbar */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.material-symbols-outlined {
+  user-select: none;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  place-content: center;
+  background-color: #ddeef7;
+}
+
+body .contenedor {
+  position: relative;
+  min-width: 400px;
+  padding: 20px 20px;
+  border-radius: 0px 0px 30px 30px;
+  box-shadow: 1px 1px 10px 0px #2224;
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: repeat(5, minmax(30px, 50px));
+  justify-content: space-evenly;
+  justify-items: center;
+  transition: all 1s;
+}
+
+.contenedor .lugar__icon {
+  position: relative;
+  padding: 12px;
+  border-radius: 50px;
+}
+
+.lugar__icon .effect__icon {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  background-color: currentColor;
+  opacity: 0;
+  transition: all 0.6s;
+}
+
+.lugar__icon .material-symbols-outlined {
+  scale: 1.5;
+  transition: all 0.7s 0.1s;
+}
+
+.contenedor .icon--home {
+  color: #5498ff;
+}
+.contenedor .icon--cup {
+  color: #c18700;
+}
+.contenedor .icon--add {
+  color: #0042a4;
+}
+.contenedor .icon--search {
+  color: #d3c20b;
+}
+.contenedor .icon--person {
+  color: #820bb1;
+}
+
+.lugar__icon .btn_animation-reflect {
+  top: -55px;
+  opacity: 1;
+  transform: scale(1.5);
+  box-shadow: 0px 0px 10px 0px currentColor;
+}
+
+.lugar__icon .icon--animation {
+  color: #fff;
+  user-select: none;
+  transform: translateY(-37px) scale(1.5);
+  transition: all 0.65s 0.15s;
+  animation: subir-icono 0.2s 0.15s both;
+}
+
+body .contenedor::before {
+  content: "";
+  position: absolute;
+  background-color: #8885;
+  left: 50%;
+  bottom: 4px;
+  transform: translateX(-50%);
+  width: 134px;
+  padding: 2px 0px;
+}
+
+@keyframes subir-icono {
+  0% {
+    opacity: 1;
+  }
+  40%,
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Fin de navbar */
