@@ -1,0 +1,207 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #e8eaf5;
+  height: 100dvh;
+  display: grid;
+  place-content: center;
+}
+
+/* Inicio de Botón Downloader */
+
+body .contenedor {
+  color: #fff;
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  user-select: none;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+:is(.btn_icon_downloader, .btn__progress, .btn__status) {
+  flex: 0 0 80px;
+}
+
+.contenedor .btn_icon_downloader {
+  background-color: #1e252c;
+  height: 100%;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn_icon_downloader .icon_downloader_arrow {
+  background-color: #1e252c;
+  transform: rotate(180deg) scaleY(1.2);
+  position: relative;
+}
+
+.btn_icon_downloader .icon_downloader_canasta {
+  width: 46px;
+  height: 20px;
+  display: none;
+  position: relative;
+}
+
+.icon_downloader_canasta * {
+  background-color: #000;
+  position: absolute;
+  transition: all 0.3s;
+}
+
+.icon_downloader_canasta .canasta__up {
+  left: 50%;
+  transform: translateX(-50%);
+}
+.icon_downloader_canasta .canasta__right {
+  right: 0%;
+}
+.icon_downloader_canasta .canasta__down {
+  bottom: 0%;
+}
+.icon_downloader_canasta .down--right {
+  right: 0%;
+}
+
+.contenedor .btn__progress {
+  background-color: #1e252c;
+  color: #1e252c;
+  height: 100%;
+  overflow: hidden;
+  place-content: center;
+  display: none;
+  border-radius: 0px 10px 10px 0px;
+  position: relative;
+  z-index: 0;
+}
+
+.btn__progress .progress__icon {
+  width: 100%;
+  height: 100%;
+  display: none;
+  z-index: 20;
+}
+
+.progress__icon * {
+  opacity: 0;
+  transition: all 0.1s;
+}
+
+.btn__progress .progress__bar {
+  background-color: #037af1;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  z-index: 0;
+}
+
+.contenedor .btn__status {
+  background-color: #e8eaf5;
+  color: #1e252c;
+  height: 100%;
+  justify-content: center;
+  justify-items: center;
+  align-items: end;
+  display: none;
+}
+
+.btn__status .status__title {
+  color: #787a;
+}
+
+.btn__status .status__percentage {
+  align-self: start;
+}
+
+.contenedor-btn-escala {
+  pointer-events: none;
+  animation: btn_scala 6s both;
+}
+
+.icon-downloader-animation {
+  animation: change_background 6s both;
+}
+
+.icon-arrow-animation {
+  color: #1e252c;
+  animation: arrow_animation 1s infinite;
+  position: relative;
+  z-index: 20;
+}
+
+.btn-progress-background {
+  animation: change_background 6s both;
+}
+
+.btn-status-animation {
+  flex: 0 0 90px;
+  opacity: 0;
+  animation: status_change_opacity 6s both;
+}
+
+@keyframes btn_scala {
+  10%,
+  90% {
+    width: 270px;
+    height: 90px;
+  }
+  100% {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@keyframes change_background {
+  7.5% {
+    background-color: #fff;
+    flex: 0 0 90px;
+  }
+  92.5% {
+    background-color: #fff;
+    opacity: 1;
+    flex: 0 0 90px;
+  }
+}
+
+@keyframes status_change_opacity {
+  7.5%,
+  92.5% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+    display: none;
+  }
+}
+
+@keyframes arrow_animation {
+  0%,
+  100% {
+    background-color: inherit;
+    top: 0px;
+  }
+  50% {
+    top: 10px;
+  }
+}
+
+@keyframes arrow_background {
+  19%,
+  90% {
+    background-color: #fff;
+  }
+  100% {
+    background-color: transparent;
+  }
+}
+
+/* Fin de Botón downloader */

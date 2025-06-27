@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Botón Descarga</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="styles.css" />
+    <script src="script.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Boton Downloader -->
+    <div class="contenedor" role="button" aria-label="Boton de descarga animado">
+      <div class="btn_icon_downloader">
+        <!-- Icon section -->
+        <span class="material-symbols-outlined icon_downloader_arrow">arrow_upward</span>
+        <div class="icon_downloader_canasta">
+          <!-- Animacion de caja -->
+          <div class="canasta__up"></div>
+          <div class="canasta__right"></div>
+          <div class="canasta__left"></div>
+          <div class="canasta__down down--left"></div>
+          <div class="canasta__down down--right"></div>
+        </div>
+      </div>
+      <div class="btn__progress">
+        <!-- Process bar -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="material-symbols-outlined progress__icon">
+          <!-- Animación de palomita -->
+          <line
+            x1="30%"
+            y1="50%"
+            x2="30%"
+            y2="50%"
+            stroke="white"
+            stroke-width="6%"
+            stroke-linecap="round"
+            class="icon_line_1"
+          />
+          <line
+            x1="45%"
+            y1="70%"
+            x2="45%"
+            y2="70%"
+            stroke="white"
+            stroke-width="6%"
+            stroke-linecap="round"
+            class="icon_line_2"
+          />
+        </svg>
+        <div class="progress__bar"></div>
+      </div>
+      <div class="btn__status">
+        <!-- Status section -->
+        <p class="status__title">Status</p>
+        <p class="status__percentage">0%</p>
+      </div>
+    </div>
+  </body>
+</html>
