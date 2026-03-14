@@ -1,0 +1,32 @@
+{
+  "name": "hern-andez.github.io",
+  "version": "1.0.0",
+  "start": "vite",
+  "description": "UI animation examples built with CSS and JavaScript.",
+  "keywords": [
+    "Animation",
+    "ui"
+  ],
+  "homepage": "https://github.com/hern-andez/hern-andez.github.io#readme",
+  "bugs": {
+    "url": "https://github.com/hern-andez/hern-andez.github.io/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hern-andez/hern-andez.github.io.git"
+  },
+  "license": "ISC",
+  "author": "Jesus Hernandez",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "dependencies": {
+    "gsap": "^3.14.2"
+  },
+  "devDependencies": {
+    "vite": "^7.3.1"
+  }
+}

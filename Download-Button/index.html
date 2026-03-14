@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Metadatos -->
+    <meta name="description" content="Animated download button" />
+    <meta name="author" content="Jesus Hernandez" />
+    <meta name="keywords" content="boton, downloader, animation, button animated" />
+    <meta name="copyright" content="jh376490@gmail.com" />
+    <meta name="robots" content="follow, index" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Download Button" />
+    <meta property="og:description" content="Animated download button" />
+    <meta property="og:url" content="https://hern-andez-github-io.vercel.app/Download-Button" />
+    <meta property="og:type" content="website" />
+    <meta property="twitter:card" content="summary" />
+
+    <title>Download Button</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="styles.css" />
+    <script src="script.js" defer type="module"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Botón de descarga -->
+    <button class="contenedor" aria-label="Animated Download Button">
+      <div class="btn_icon_downloader btn-content-box">
+        <!-- Sección del icono -->
+        <span class="material-symbols-outlined icon_downloader_arrow">arrow_upward</span>
+        <div class="icon_downloader_canasta">
+          <!-- Icono de caja -->
+          <div class="canasta__line line--up"></div>
+          <div class="canasta__line line--side"></div>
+          <div class="canasta__line line--side line--right"></div>
+          <div class="canasta__line line--down down--left"></div>
+          <div class="canasta__line line--down down--right"></div>
+        </div>
+      </div>
+      <div class="btn__progress btn-content-box">
+        <!-- Barra de progreso -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="material-symbols-outlined progress__icon">
+          <!-- Animación de palomita -->
+          <line
+            x1="30%"
+            y1="50%"
+            x2="30%"
+            y2="50%"
+            stroke="white"
+            stroke-width="6%"
+            stroke-linecap="round"
+            class="icon_line_1"
+          />
+          <line
+            x1="45%"
+            y1="70%"
+            x2="45%"
+            y2="70%"
+            stroke="white"
+            stroke-width="6%"
+            stroke-linecap="round"
+            class="icon_line_2"
+          />
+        </svg>
+        <div class="progress__bar"></div>
+      </div>
+      <div class="btn__status">
+        <!-- Seccion de estado -->
+        <p class="status__title">Status</p>
+        <p class="status__percentage">0%</p>
+      </div>
+    </button>
+  </body>
+</html>
