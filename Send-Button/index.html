@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Metadatos -->
+    <meta name="title" content="Send Button" />
+    <meta
+      name="description"
+      content="Interactive submit button that responds to clicks with a loading animation and visual confirmation."
+    />
+    <meta name="keywords" content="Boton, submit, animation" />
+    <meta name="author" content="Jesus Hernandez" />
+    <meta name="copyright" content="jh376490@gmail.com" />
+    <meta name="robots" content="follow, index" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Send button animation" />
+    <meta
+      property="og:description"
+      content="Interactive submit button that responds to clicks with a loading animation and visual confirmation."
+    />
+    <meta property="og:url" content="https://hern-andez-github-io.vercel.app/Send-Button" />
+    <meta property="og:type" content="website" />
+    <meta property="twitter:card" content="summary" />
+
+    <title>Send Botom</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="styles.css" />
+    <script src="script.js" type="module" defer></script>
+  </head>
+  <body>
+    <!-- Contenedor -->
+    <button class="submitBtn" aria-label="Boton de enviar">
+      <span class="btn__text">Submit</span>
+      <svg class="btn_circle_animation">
+        <!-- Animación de palomita -->
+        <line
+          x1="30%"
+          y1="50%"
+          x2="30%"
+          y2="50%"
+          stroke="white"
+          stroke-width="7%"
+          stroke-linecap="round"
+          class="submitBtn_line_1"
+        />
+        <line
+          x1="45%"
+          y1="70%"
+          x2="45%"
+          y2="70%"
+          stroke="white"
+          stroke-width="7%"
+          stroke-linecap="round"
+          class="submitBtn_line_2"
+        />
+      </svg>
+      <!-- Proceso -->
+      <div class="btn__load"></div>
+    </button>
+  </body>
+</html>
