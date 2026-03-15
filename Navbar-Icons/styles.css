@@ -16,6 +16,10 @@ body {
   background-color: #ddeef7;
 }
 
+button {
+  border: none;
+}
+
 body .contenedor {
   position: relative;
   min-width: 400px;
@@ -31,6 +35,7 @@ body .contenedor {
 }
 
 .contenedor .lugar__icon {
+  background: transparent;
   position: relative;
   padding: 12px;
   border-radius: 50px;
@@ -51,22 +56,6 @@ body .contenedor {
 .lugar__icon .material-symbols-outlined {
   scale: 1.5;
   transition: all 0.7s 0.1s;
-}
-
-.contenedor .icon--home {
-  color: #5498ff;
-}
-.contenedor .icon--cup {
-  color: #c18700;
-}
-.contenedor .icon--add {
-  color: #0042a4;
-}
-.contenedor .icon--search {
-  color: #d3c20b;
-}
-.contenedor .icon--person {
-  color: #820bb1;
 }
 
 .lugar__icon .btn_animation-reflect {
