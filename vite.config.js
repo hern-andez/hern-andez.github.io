@@ -7,6 +7,7 @@ export default defineConfig({
       input: {
         "Download-Button": resolve("Download-Button/index.html"),
         "Send-Button": resolve("Send-Button/index.html"),
+        "Neon-Button": resolve("Neon-Button/index.html"),
       },
     },
   },
